@@ -1,0 +1,98 @@
+# ════════════════════════════════════════════════════════════
+#  .gitignore — Sistema de Gestión Inmobiliaria
+#  Proyecto Java + Maven + NetBeans + MySQL
+# ════════════════════════════════════════════════════════════
+
+# ── Java compilado ──────────────────────────────────────────
+*.class
+*.jar
+*.war
+*.ear
+*.nar
+hs_err_pid*
+
+# ── Maven ───────────────────────────────────────────────────
+target/
+pom.xml.tag
+pom.xml.releaseBackup
+pom.xml.versionsBackup
+pom.xml.next
+release.properties
+dependency-reduced-pom.xml
+buildNumber.properties
+.mvn/timing.properties
+.mvn/wrapper/maven-wrapper.jar
+
+# ── NetBeans ────────────────────────────────────────────────
+nbproject/private/
+nbproject/Makefile-*.mk
+nbproject/Package-*.bash
+nbbuild/
+nbdist/
+.nb-gradle/
+build/
+nb-configuration.xml
+
+# ── IntelliJ IDEA ───────────────────────────────────────────
+.idea/
+*.iml
+*.iws
+*.ipr
+out/
+
+# ── Eclipse ─────────────────────────────────────────────────
+.metadata/
+.classpath
+.project
+.settings/
+.factorypath
+bin/
+tmp/
+*.tmp
+*.bak
+*.swp
+*~.nib
+local.properties
+
+# ── VS Code ─────────────────────────────────────────────────
+.vscode/
+*.code-workspace
+
+# ── Sistema operativo ───────────────────────────────────────
+# Windows
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+*.lnk
+
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Linux
+.directory
+.Trash-*
+
+# ── Logs y archivos temporales ──────────────────────────────
+*.log
+*.tmp
+*.temp
+*.cache
+
+# ── Archivos sensibles (NUNCA subir a GitHub) ───────────────
+# Credenciales y configuraciones locales
+*.env
+.env.local
+config.properties
+credentials.txt
+
+# ── Archivos del proyecto ───────────────────────────────────
+# PDFs de prueba generados durante el desarrollo
+factura_prueba.pdf
+*.pdf
+
+# Backups de la base de datos
+*.bak
+*.sql.backup
