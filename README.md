@@ -1,4 +1,4 @@
-# 🏠 Sistema de Gestión Inmobiliaria
+#  Sistema de Gestión Inmobiliaria
 
 Sistema de escritorio para la administración integral de propiedades, clientes, ventas y arriendos de una empresa inmobiliaria. Desarrollado en **Java** con interfaz gráfica **Swing**, persistencia en **MySQL** mediante **JDBC** y generación de facturas en **PDF**.
 
@@ -6,7 +6,7 @@ Sistema de escritorio para la administración integral de propiedades, clientes,
 
 ---
 
-## 📑 Tabla de contenido
+##  Tabla de contenido
 
 - [Características](#-características)
 - [Tecnologías](#️-tecnologías)
@@ -23,7 +23,7 @@ Sistema de escritorio para la administración integral de propiedades, clientes,
 
 ---
 
-## ✨ Características
+##  Características
 
 - **Registro y consulta** de clientes, propiedades (casas y apartamentos), agentes, ventas y arriendos
 - **Cálculo automático** de precios según las características de la propiedad (área, piso, administración, patio)
@@ -38,7 +38,7 @@ Sistema de escritorio para la administración integral de propiedades, clientes,
 
 ---
 
-## 🛠️ Tecnologías
+##  Tecnologías
 
 | Tecnología | Versión | Uso |
 |---|---|---|
@@ -54,7 +54,7 @@ Sistema de escritorio para la administración integral de propiedades, clientes,
 
 ---
 
-## 🏗️ Arquitectura
+##  Arquitectura
 
 El proyecto sigue una **arquitectura modular** con separación clara de responsabilidades:
 
@@ -70,24 +70,24 @@ com.mycompany.proyectosistemainmobiliario/
 ```
 
 **Principios aplicados:**
-- ✅ Encapsulamiento, herencia, polimorfismo y abstracción
-- ✅ Separación de responsabilidades
-- ✅ Reutilización mediante interfaces (`IFacturable`)
-- ✅ Genéricos (`Repositorio<T>`)
-- ✅ Transacciones atómicas en operaciones críticas
+-  Encapsulamiento, herencia, polimorfismo y abstracción
+-  Separación de responsabilidades
+-  Reutilización mediante interfaces (`IFacturable`)
+-  Genéricos (`Repositorio<T>`)
+-  Transacciones atómicas en operaciones críticas
 
 ---
 
-## 📋 Requisitos previos
+##  Requisitos previos
 
 Antes de comenzar, asegúrate de tener instalado:
 
-- ☕ **Java JDK 23** o superior — [Descargar](https://www.oracle.com/java/technologies/downloads/)
-- 🗄️ **MySQL Server 8.x** — [Descargar](https://dev.mysql.com/downloads/mysql/)
-- 🖥️ **MySQL Workbench** (recomendado) — [Descargar](https://dev.mysql.com/downloads/workbench/)
-- 💻 **NetBeans 19+** o **IntelliJ IDEA** o cualquier IDE compatible con Maven
-- 📦 **Maven 3.x** (incluido en NetBeans/IntelliJ)
-- 🌐 **Git** (para clonar el repositorio)
+-  **Java JDK 23** o superior — [Descargar](https://www.oracle.com/java/technologies/downloads/)
+-  **MySQL Server 8.x** — [Descargar](https://dev.mysql.com/downloads/mysql/)
+-  **MySQL Workbench** (recomendado) — [Descargar](https://dev.mysql.com/downloads/workbench/)
+-  **NetBeans 19+** o **IntelliJ IDEA** o cualquier IDE compatible con Maven
+-  **Maven 3.x** (incluido en NetBeans/IntelliJ)
+-  **Git** (para clonar el repositorio)
 
 Verifica tus instalaciones con:
 ```bash
@@ -98,7 +98,7 @@ mysql --version  # debe mostrar 8.x
 
 ---
 
-## 🚀 Instalación paso a paso
+##  Instalación paso a paso
 
 ### 1. Clonar el repositorio
 
@@ -137,7 +137,7 @@ SELECT COUNT(*) FROM propiedad_tb;  -- debe retornar 7
 
 ---
 
-## 🔧 Configuración de la conexión
+##  Configuración de la conexión
 
 Antes de ejecutar el programa, debes ajustar los datos de conexión a **tu** servidor MySQL local.
 
@@ -154,11 +154,11 @@ private static final String USUARIO  = "root";          // ← tu usuario MySQL
 private static final String CLAVE    = "tu_contraseña"; // ← tu contraseña MySQL
 ```
 
-> ⚠️ **Importante:** Por seguridad, considera usar variables de entorno en lugar de hardcodear la contraseña en un proyecto de producción.
+>  **Importante:** Por seguridad, considera usar variables de entorno en lugar de hardcodear la contraseña en un proyecto de producción.
 
 ---
 
-## ▶️ Ejecución
+##  Ejecución
 
 ### Desde NetBeans
 
@@ -171,7 +171,7 @@ private static final String CLAVE    = "tu_contraseña"; // ← tu contraseña M
 
 1. `File → Open` y seleccionar la carpeta del proyecto
 2. Esperar a que IntelliJ indexe el proyecto
-3. Abrir `Main.java` y presionar el ícono de play ▶️ o `Shift + F10`
+3. Abrir `Main.java` y presionar el ícono de play o `Shift + F10`
 
 ### Desde línea de comandos (Maven)
 
@@ -184,7 +184,7 @@ Al ejecutar, la primera pantalla será el **login**. Una vez autenticado, verás
 
 ---
 
-## 👤 Usuarios por defecto
+##  Usuarios por defecto
 
 El script SQL incluye estos usuarios para pruebas (las contraseñas están cifradas con bcrypt):
 
@@ -197,7 +197,7 @@ El script SQL incluye estos usuarios para pruebas (las contraseñas están cifra
 
 ---
 
-## 📁 Estructura del proyecto
+##  Estructura del proyecto
 
 ```
 ProyectoSistemaInmobiliario/
@@ -248,7 +248,7 @@ ProyectoSistemaInmobiliario/
 
 ---
 
-## 📊 Pruebas de rendimiento
+##  Pruebas de rendimiento
 
 El proyecto incluye un módulo de benchmarking que mide:
 
@@ -266,7 +266,7 @@ Equivalente a más de **8.000 operaciones por minuto**, suficiente para una inmo
 
 ---
 
-## 🔧 Solución de problemas
+##  Solución de problemas
 
 <details>
 <summary><b>Error: <code>Access denied for user 'root'@'localhost'</code></b></summary>
@@ -311,13 +311,13 @@ Asegúrate de tener la dependencia OpenPDF descargada (ejecuta `mvn clean instal
 
 ---
 
-## 📄 Licencia
+##  Licencia
 
 Este proyecto fue desarrollado con fines académicos. Puede ser usado libremente para aprendizaje y referencia.
 
 ---
 
-## 👥 Autores
+##  Autores
 
 **Equipo de desarrollo:**
 
@@ -334,6 +334,6 @@ Este proyecto fue desarrollado con fines académicos. Puede ser usado libremente
 
 <div align="center">
 
-⭐ **Si este proyecto te fue útil, no olvides darle una estrella en GitHub** ⭐
+**Si este proyecto te fue útil, no olvides darle una estrella en GitHub** 
 
 </div>
