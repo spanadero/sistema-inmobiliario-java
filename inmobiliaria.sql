@@ -146,3 +146,17 @@ INSERT INTO arriendo_tb (clienteId_arr, propiedadId_arr, agenteId_arr, valorMens
 -- La fórmula Java es:
 --   Apartamento: area_prop * 3.000.000 + (piso>10 ? *1.05) + administracion_apto
 --   Casa:        area_prop * 3.500.000 + (patio ? +20.000.000) * (area>100 ? *1.1)
+
+CREATE TABLE usuario_tb(
+	id_usu INT PRIMARY KEY AUTO_INCREMENT,
+    username_usu VARCHAR(50) NOT NULL UNIQUE,
+    password_usu VARCHAR(100) NOT NULL, -- hash BCrypt (60 chars)
+    rol_usu ENUM( 'ADMIN','AGENTE') DEFAULT 'AGENTE',
+    activo_usu BOOLEAN DEFAULT TRUE,
+    nombre_usu VARCHAR(100)
+);
+
+-- Usuario admin inicial (password: admin123)
+-- El hash real lo genera BCrypt.hashpw("admin123", BCrypt.gensalt())
+INSERT INTO usuario_tb (username_usu, password_usu, rol_usu, nombre_usu)
+VALUES ('admin', '$2a$10$IhjlS4lUZDwQj3OO.5WcOOl8qe28OUn.NX1FUk2Surj/jTvOiTOpu', 'ADMIN', 'Administrador');
